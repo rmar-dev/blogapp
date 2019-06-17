@@ -1,0 +1,19 @@
+Query:
+  type: object
+  config:
+    description: "Main query"
+    fields:
+      user:
+        type: "User"
+        args:
+          id:
+            description: ' get user by ID'
+            type: 'Int'
+        resolve: "@=resolver('User', [args])"
+      tenant_users_service_collection:
+        type: "tenant_users_service_collection"
+        args:
+          id:
+            description: "tenant id"
+            type: "Int"
+        resolve: "@=resolver('res', [args])"

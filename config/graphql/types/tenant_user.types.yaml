@@ -1,0 +1,23 @@
+tenant_user:
+  type: object
+  config:
+    description: "User type"
+    fields:
+      user_id:
+        type: "Int"
+        description: "The unique ID of the User."
+      tenant_id:
+        type: 'Int'
+        description: "The unique ID of tenant"
+
+tenant_users_service_collection:
+  type: object
+  config:
+    description: "User type"
+    fields:
+      user_collection:
+        type: "[User]"
+        description: "The username of the user"
+      tenant:
+        type: "String"
+        description: "the tenant that the user belong to"
